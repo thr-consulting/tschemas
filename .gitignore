@@ -3,3 +3,4 @@ lib
 .idea
 npm-debug.log
 yarn.lock
+.npmrc
