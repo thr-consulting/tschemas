@@ -1,6 +1,6 @@
 {
 	"name": "tschemas",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Useful yup schema shortcuts",
 	"main": "lib/index.js",
 	"scripts": {
@@ -10,13 +10,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "http://github.com"
+		"url": "https://github.com/thr-consulting/tschemas.git"
 	},
 	"keywords": [
-		"yup"
+		"yup",
+		"schema"
 	],
 	"author": "Mike Kornelson <mike@durbn.net>",
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"babel-core": "^6.24.0",
 		"babel-loader": "^6.4.1",
