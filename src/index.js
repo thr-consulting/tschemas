@@ -60,8 +60,14 @@ class MomentSchema extends mixed {
 }
 
 const money = yup.object({
-	amount: yup.number(),
-	currency: yup.string(),
+	amount: yup.number().required('Amount required'),
+	currency: yup.string().required('Currency required'),
+});
+
+const localDate = yup.object({
+	_day: yup.number().required('Day required'),
+	_month: yup.number().required('Month required'),
+	_year: yup.number().required('Year required'),
 });
 
 export default {
@@ -73,6 +79,7 @@ export default {
 	sin,
 	moment: () => new MomentSchema(),
 	money,
+	localDate,
 };
 
 /**

@@ -1,6 +1,6 @@
 {
 	"name": "tschemas",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "Useful yup schema shortcuts",
 	"main": "lib/index.js",
 	"scripts": {
