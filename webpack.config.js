@@ -7,6 +7,7 @@ const root = path.resolve(__dirname);
 module.exports = {
 	entry: './src/index.js',
 	target: 'node',
+	devtool: 'source-map',
 	externals: [nodeExternals()],
 	output: {
 		path: path.resolve(root, 'lib'),
@@ -34,10 +35,11 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-			},
-		}),
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress: {
+		// 		warnings: false,
+		// 	},
+		// 	sourceMap: true,
+		// }),
 	]
 };
