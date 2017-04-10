@@ -1,40 +1,27 @@
-import 'babel-polyfill'
-import 'jsdom-global/register';
-import chai, {expect} from 'chai';
-import chaiEnzyme from 'chai-enzyme';
-import {mount, shallow} from 'enzyme';
-import React, {Component} from 'react';
-import TPropTypes from '../lib';
+import {expect} from 'chai';
+import TSchemas from '../lib';
 
-chai.use(chaiEnzyme());
+describe('TSchemas.email', () => {
+	it('should validate proper emails', () => {
+		TSchemas.email.isValid('test@example.com').then(valid => expect(valid).to.equal(true));
+	});
+	it('should reject improper emails', () => {
+		TSchemas.email.isValid('test').then(valid => expect(valid).to.equal(false));
+	});
+	it('should reject improper emails', () => {
+		TSchemas.email.isValid('').then(valid => expect(valid).to.equal(false));
+	});
+});
 
-const routerLocation = {
-	hash: '',
-	pathname: '/',
-	search: ',',
-	state: {}
-};
-
-function RouterLocationComponent(props) {
-	return <div/>;
-}
-RouterLocationComponent.propTypes = {
-	routerLocation: TPropTypes.routerLocation.isRequired,
-};
-
-class Fixture extends Component {
-	render() {
-		return (
-			<div>
-				<RouterLocationComponent routerLocation={routerLocation}/>
-			</div>
-		);
-	}
-}
-
-const wrapper = mount(<Fixture/>);
-
-describe('TPropTypes', () => {
-	expect(wrapper.find(RouterLocationComponent).first()).to.have.prop('routerLocation');
-	expect(wrapper.find(RouterLocationComponent).first()).to.have.prop('routerLocation').deep.equal({});
+describe('TSchemas.password', () => {
+	it('should validate password length', () => {
+		TSchemas.password.isValid('abcd', valid => {
+			expect(valid).to.equal(false);
+		})
+	});
+	it('should validate password length', () => {
+		TSchemas.password.isValid('abcdef', valid => {
+			expect(valid).to.equal(true);
+		})
+	});
 });
