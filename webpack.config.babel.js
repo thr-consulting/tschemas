@@ -1,6 +1,5 @@
-var webpack = require('webpack');
-var path = require('path');
-var nodeExternals = require('webpack-node-externals');
+import path from 'path';
+import nodeExternals from 'webpack-node-externals';
 
 const root = path.resolve(__dirname);
 
@@ -11,9 +10,9 @@ module.exports = {
 	externals: [nodeExternals()],
 	output: {
 		path: path.resolve(root, 'dist'),
-		filename: "index.js",
-		library: "tschemas",
-		libraryTarget: "umd"
+		filename: 'index.js',
+		library: 'tschemas',
+		libraryTarget: 'umd',
 	},
 	module: {
 		rules: [
@@ -24,15 +23,17 @@ module.exports = {
 					{
 						loader: 'babel-loader',
 						options: {
+							babelrc: false,
 							presets: [
 								['es2015', {loose: true, modules: false}],
-								'stage-1'
-							]
-						}
-					}
+								'stage-1',
+								'flow',
+							],
+						},
+					},
 				],
-			}
-		]
+			},
+		],
 	},
 	plugins: [
 		// new webpack.optimize.UglifyJsPlugin({
@@ -41,5 +42,5 @@ module.exports = {
 		// 	},
 		// 	sourceMap: true,
 		// }),
-	]
+	],
 };

@@ -7,12 +7,13 @@
     ]
   },
   "source": {
-    "include": "src",
+    "include": "lib",
     "includePattern": ".+\\.js(doc)?$",
     "excludePattern": "(^|\\/|\\\\)_"
   },
   "plugins": [
-    "node_modules/jsdoc-babel"
+    "node_modules/jsdoc-babel",
+    "./jsdoc.globals.js"
   ],
   "templates": {
     "cleverLinks": false,
@@ -26,7 +27,9 @@
       "js"
     ],
     "presets": [
-      "stage-1"
+	    "es2015",
+      "stage-1",
+	    "flow"
     ]
   },
   "opts": {
