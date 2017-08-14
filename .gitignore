@@ -4,5 +4,6 @@ dist
 npm-debug.log
 yarn.lock
 .npmrc
-docs
+docs/*
+!docs/README.md
 coverage
