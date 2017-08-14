@@ -1,6 +1,6 @@
 {
   "name": "tschemas",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Useful yup schema shortcuts",
   "main": "dist/index.js",
   "scripts": {
@@ -46,7 +46,7 @@
     "jest": "^20.0.4",
     "jsdoc": "^3.5.4",
     "jsdoc-babel": "^0.3.0",
-	  "jsdoc-to-markdown": "^3.0.0",
+    "jsdoc-to-markdown": "^3.0.0",
     "precommit-hook-eslint": "^3.0.0",
     "webpack": "^3.5.4",
     "webpack-node-externals": "^1.6.0"
