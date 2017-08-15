@@ -2,7 +2,6 @@
 ## Members
 
 * [MomentSchema](#MomentSchema)
-* [localDateObject](#localDateObject)
 * [localDateNumber](#localDateNumber)
 * [LocalDateSchema](#LocalDateSchema)
 * [money](#money)
@@ -13,7 +12,6 @@
 * [phone](#phone)
 * [sin](#sin)
 * [MomentSchema](#MomentSchema)
-* [localDateObject](#localDateObject)
 * [localDateNumber](#localDateNumber)
 * [LocalDateSchema](#LocalDateSchema)
 * [money](#money)
@@ -33,12 +31,6 @@
 
 ## MomentSchema
 Validates a Moment.
-
-**Kind**: global variable  
-<a name="localDateObject"></a>
-
-## localDateObject
-Validates a LocalDate object (from js-joda).
 
 **Kind**: global variable  
 <a name="localDateNumber"></a>
@@ -104,12 +96,6 @@ Validates a Canadian SIN.
 
 ## MomentSchema
 Validates a Moment.
-
-**Kind**: global variable  
-<a name="localDateObject"></a>
-
-## localDateObject
-Validates a LocalDate object (from js-joda).
 
 **Kind**: global variable  
 <a name="localDateNumber"></a>
