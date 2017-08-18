@@ -58,6 +58,11 @@
     "social-insurance-number": "^0.0.2",
     "yup": "^0.21.3"
   },
+  "greenkeeper": {
+    "ignore": [
+      "eslint-plugin-jsx-a11y"
+    ]
+  },
   "pre-commit": [
     "lint",
     "flow",
