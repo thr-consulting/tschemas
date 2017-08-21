@@ -4,13 +4,16 @@ import nodeExternals from 'webpack-node-externals';
 const root = path.resolve(__dirname);
 
 module.exports = {
-	entry: './lib/index.js',
+	entry: {
+		main: './lib/index.js',
+		server: './lib/serverIndex.js',
+	},
 	target: 'node',
 	devtool: 'source-map',
 	externals: [nodeExternals()],
 	output: {
 		path: path.resolve(root, 'dist'),
-		filename: 'index.js',
+		filename: '[name].js',
 		library: 'tschemas',
 		libraryTarget: 'umd',
 	},
