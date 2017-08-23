@@ -8,3 +8,7 @@ Useful yup schema shortcuts
 ```
 yarn add @thx/tschemas
 ```
+
+## Documentation
+
+You can find API documentation [here](/docs).
