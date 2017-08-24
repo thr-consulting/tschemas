@@ -1,8 +1,8 @@
 {
   "name": "@thx/tschemas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Useful yup schema shortcuts",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
     "prepare": "npm run build",
