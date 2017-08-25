@@ -4,7 +4,7 @@
 * [MomentSchema](#MomentSchema)
 * [localDateNumber](#localDateNumber)
 * [LocalDateSchema](#LocalDateSchema)
-* [money](#money)
+* [MoneySchema](#MoneySchema)
 * [email](#email)
 * [password](#password)
 * [passwordSecond](#passwordSecond)
@@ -14,13 +14,18 @@
 * [MomentSchema](#MomentSchema)
 * [localDateNumber](#localDateNumber)
 * [LocalDateSchema](#LocalDateSchema)
-* [money](#money)
+* [MoneySchema](#MoneySchema)
 * [email](#email)
 * [password](#password)
 * [passwordSecond](#passwordSecond)
 * [address](#address)
 * [phone](#phone)
 * [sin](#sin)
+
+## Functions
+
+* [schemaValidate(schema, obj, validateOptions)](#schemaValidate) ⇒ <code>object</code>
+* [schemaValidate(schema, obj, validateOptions)](#schemaValidate) ⇒ <code>object</code>
 
 ## Typedefs
 
@@ -45,10 +50,10 @@ Validates a LocalDateNumber
 Validates a LocalDate
 
 **Kind**: global variable  
-<a name="money"></a>
+<a name="MoneySchema"></a>
 
-## money
-Validates a Money object (from js-money).
+## MoneySchema
+Validates a Money (from js-money).
 
 **Kind**: global variable  
 <a name="email"></a>
@@ -110,10 +115,10 @@ Validates a LocalDateNumber
 Validates a LocalDate
 
 **Kind**: global variable  
-<a name="money"></a>
+<a name="MoneySchema"></a>
 
-## money
-Validates a Money object (from js-money).
+## MoneySchema
+Validates a Money (from js-money).
 
 **Kind**: global variable  
 <a name="email"></a>
@@ -157,6 +162,38 @@ Validates a phone number.
 Validates a Canadian SIN.
 
 **Kind**: global variable  
+<a name="schemaValidate"></a>
+
+## schemaValidate(schema, obj, validateOptions) ⇒ <code>object</code>
+Validates a schema on the server. This function is for use on the server only!
+Returns null if validation passed. Returns a yup ValidationError if it fails.
+Does not include the object as 'value'.
+
+**Kind**: global function  
+**Tag**: Server  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| schema | [<code>YupSchema</code>](#YupSchema) | The schema to validate against. |
+| obj | <code>object</code> | The object to validate. |
+| validateOptions |  | Custom yup validate options. |
+
+<a name="schemaValidate"></a>
+
+## schemaValidate(schema, obj, validateOptions) ⇒ <code>object</code>
+Validates a schema on the server. This function is for use on the server only!
+Returns null if validation passed. Returns a yup ValidationError if it fails.
+Does not include the object as 'value'.
+
+**Kind**: global function  
+**Tag**: Server  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| schema | [<code>YupSchema</code>](#YupSchema) | The schema to validate against. |
+| obj | <code>object</code> | The object to validate. |
+| validateOptions |  | Custom yup validate options. |
+
 <a name="YupSchema"></a>
 
 ## YupSchema : <code>Object</code>
