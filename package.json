@@ -1,6 +1,6 @@
 {
   "name": "@thx/tschemas",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Useful yup schema shortcuts",
   "main": "dist/main.js",
   "scripts": {
