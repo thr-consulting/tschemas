@@ -1,3 +1,14 @@
-src/
+.circleci/
 lib/
 docs/
+coverage/
+dist/
+node_modules/
+.babelrc
+.eslintrc
+.flowconfig
+.nvmrc
+jsdoc.globals.js
+jsdoc.json
+webpack.config.babel.js
+yarn.lock

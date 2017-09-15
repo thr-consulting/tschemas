@@ -1,21 +1,21 @@
 import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 
+const DEPLOY = process.env.DEPLOY === 'true';
+
 const root = path.resolve(__dirname);
 
 module.exports = {
 	entry: {
-		main: './lib/index.js',
-		server: './lib/serverIndex.js',
+		index: './lib/index.js',
 	},
-	target: 'node',
+	target: 'web',
 	devtool: 'source-map',
 	externals: [nodeExternals()],
 	output: {
-		path: path.resolve(root, 'dist'),
+		path: DEPLOY ? path.resolve(root) : path.resolve(root, 'dist'),
 		filename: '[name].js',
-		library: 'tschemas',
-		libraryTarget: 'umd',
+		libraryTarget: 'commonjs2',
 	},
 	module: {
 		rules: [
@@ -28,8 +28,7 @@ module.exports = {
 						options: {
 							babelrc: false,
 							presets: [
-								['es2015', {loose: true, modules: false}],
-								'stage-1',
+								['env', {modules: false, targets: {browsers: 'last 2 versions'}}],
 								'flow',
 							],
 						},
