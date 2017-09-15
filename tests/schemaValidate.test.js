@@ -1,5 +1,5 @@
 import yup from 'yup';
-import TSchemas from '..';
+import TSchemas from '../src/index';
 
 const obj = {
 	anumber: 5,

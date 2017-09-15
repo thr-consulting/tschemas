@@ -1,6 +1,6 @@
 import moment from 'moment';
 import {LocalDate} from 'js-joda';
-import TSchemas from '..';
+import TSchemas from '../src/index';
 
 describe('TSchemas.moment', () => {
 	it('should validate moments', async () => {

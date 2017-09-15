@@ -7,7 +7,7 @@
     ]
   },
   "source": {
-    "include": "lib",
+    "include": "src",
     "includePattern": ".+\\.js(doc)?$",
     "excludePattern": "(^|\\/|\\\\)_"
   },
@@ -27,9 +27,17 @@
       "js"
     ],
     "presets": [
-	    "es2015",
-      "stage-1",
-	    "flow"
+      "flow",
+	    ["jason", {
+			  "debug": false,
+			  "targets": {
+  				"browsers": [
+  					"> 1%",
+  					"last 4 versions",
+  					"not ie < 9"
+  				]
+  			}
+  		}]
     ]
   },
   "opts": {

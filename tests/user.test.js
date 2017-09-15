@@ -1,4 +1,4 @@
-import TSchemas from '..';
+import TSchemas from '../src/index';
 
 describe('TSchemas.email', () => {
 	it('should validate proper emails', async () => {

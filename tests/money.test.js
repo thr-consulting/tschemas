@@ -1,5 +1,5 @@
 import Money from 'js-money';
-import TSchemas from '..';
+import TSchemas from '../src/index';
 
 describe('TSchemas.money', () => {
 	it('should validate Money', async () => {

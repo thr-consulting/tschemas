@@ -1,18 +1,19 @@
 {
   "name": "@thx/tschemas",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Useful yup schema shortcuts",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.babel.js",
-    "deploy": "DEPLOY=true npm run build",
+    "build": "npm run clean:lib && npm run build:lib",
+    "build:lib": "babel src --out-dir lib",
+    "clean:lib": "rimraf ./lib/*",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage && cat coverage/lcov.info | coverbadge -o coverage/coverage.svg",
     "flow": "flow",
-    "lint": "eslint *.js lib",
+    "lint": "eslint *.js src",
     "docs": "jsdoc -c jsdoc.json",
-    "docs:md": "jsdoc2md -m grouped -g grouped -c jsdoc.json -f lib/*.js > docs/README.md",
+    "docs:md": "jsdoc2md -m grouped -g grouped -c jsdoc.json -f src/*.js > docs/README.md",
     "docs:explain": "jsdoc -X -c jsdoc.json",
     "validate": "npm ls"
   },
@@ -27,11 +28,10 @@
   "author": "Mike Kornelson <mike@durbn.net>",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.25.0",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
+    "babel-preset-jason": "^3.1.0",
     "coverbadge": "^0.5.5",
     "eslint": "^4.4.1",
     "eslint-config-airbnb": "^15.1.0",
@@ -47,9 +47,7 @@
     "jsdoc": "^3.5.4",
     "jsdoc-babel": "^0.3.0",
     "jsdoc-to-markdown": "^3.0.0",
-    "precommit-hook-eslint": "^3.0.0",
-    "webpack": "^3.5.4",
-    "webpack-node-externals": "^1.6.0"
+    "precommit-hook-eslint": "^3.0.0"
   },
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
